@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+<head>
+	<title>WEYO</title>
+
+	<style type="text/css">
+		body, html {height: 100%; margin: 0; padding:0;}
+		#outer {height: 100%; overflow: hidden; position: relative; width: 100%;}
+		#outer[id] {display: table; position: static;}
+
+		#middle {position: absolute; top: 50%; width: 100%; text-align: center;} /* for explorer only*/
+		#middle[id] {display: table-cell; vertical-align: middle; position: static;}
+
+		#inner {position: relative; top: -50%; text-align: left;} /* for explorer only */
+		#inner {width: 420px; margin-left: auto; margin-right: auto;} /* for all browsers*/
+		/* optional: #inner[id] {position: static;} */
+
+		/* just format */
+	</style>
+</head>
+
+<body>
+<div id="outer">
+	<div id="middle">
+		<div id="inner">
+			<img src="img/weyo.png" alt="weyo">
+		</div>
+	</div>
+</div>
+</body>
+</html>
