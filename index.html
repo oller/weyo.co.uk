@@ -15,82 +15,73 @@
         -webkit-font-smoothing: antialiased !important;
     }
     body {
-        background: #00396f;
-        background-image: -webkit--webkit-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.2)), -webkit--webkit-linear-gradient(342deg, #e5e9bf 10%, #305E8A 90%);
-        background-image: -webkit--moz-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.2)), -webkit--moz-linear-gradient(342deg, #e5e9bf 10%, #305E8A 90%);
-        background-image: -webkit--o-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.2)), -webkit--o-linear-gradient(342deg, #e5e9bf 10%, #305E8A 90%);
-        background-image: -webkit--ms-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.2)), -webkit--ms-linear-gradient(342deg, #e5e9bf 10%, #305E8A 90%);
-        background-image: -webkit-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.2)), -webkit-linear-gradient(108deg, #e5e9bf 10%, #305E8A 90%);
-        background-image: -moz--webkit-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.2)), -moz--webkit-linear-gradient(342deg, #e5e9bf 10%, #305E8A 90%);
-        background-image: -moz--moz-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.2)), -moz--moz-linear-gradient(342deg, #e5e9bf 10%, #305E8A 90%);
-        background-image: -moz--o-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.2)), -moz--o-linear-gradient(342deg, #e5e9bf 10%, #305E8A 90%);
-        background-image: -moz--ms-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.2)), -moz--ms-linear-gradient(342deg, #e5e9bf 10%, #305E8A 90%);
-        background-image: -moz-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.2)), -moz-linear-gradient(108deg, #e5e9bf 10%, #305E8A 90%);
-        background-image: -ms--webkit-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.2)), -ms--webkit-linear-gradient(342deg, #e5e9bf 10%, #305E8A 90%);
-        background-image: -ms--moz-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.2)), -ms--moz-linear-gradient(342deg, #e5e9bf 10%, #305E8A 90%);
-        background-image: -ms--o-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.2)), -ms--o-linear-gradient(342deg, #e5e9bf 10%, #305E8A 90%);
-        background-image: -ms--ms-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.2)), -ms--ms-linear-gradient(342deg, #e5e9bf 10%, #305E8A 90%);
-        background-image: -ms-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, 0.2)), -ms-linear-gradient(108deg, #e5e9bf 10%, #305E8A 90%)
+        position: relative;
+        background: linear-gradient(315deg, #e5e9bf, #00396f);
+        background-size: 400% 400%;
+        -webkit-animation: bg-animation 20s ease infinite;
+        -moz-animation: bg-animation 20s ease infinite;
+        -o-animation: bg-animation 20s ease infinite;
+        animation: bg-animation 20s ease infinite;
     }
     h1 {
         color: #fff;
         font-family:'Source Code Pro';
         font-size: 3rem;
+        text-shadow: 3px 2px 0 rgba(0, 0, 0, .05);
         text-align: center;
-        line-height: 5rem;
-        height: 5rem;
-        width: 10rem;
+        margin: 0;
+        position: absolute;
+        text-transform: uppercase;
         top: 50%;
         left: 50%;
-        margin-left: -5rem;
-        /* Half the width */
-        margin-top: -2.5rem;
-        /* Half the height */
-        position: absolute;
-        text-shadow: 3px 2px 0 rgba(0, 0, 0, .05);
-        text-transform: uppercase;
+        -webkit-transform:translate(-50%, -50%);
+        -moz-transform:translate(-50%, -50%);
+        -ms-transform:translate(-50%, -50%);
+        -o-transform:translate(-50%, -50%);
+        transform:translate(-50%, -50%);
     }
-    .animated {
-        -webkit-animation-duration: 1s;
-        animation-duration: 1s;
+    .logo--animated {
+        -webkit-animation: fadeIn 3s ease;
+        -moz-animation: fadeIn 3s ease;
+        -o-animation: fadeIn 3s ease;
+        animation: fadeIn 3s ease;
         -webkit-animation-fill-mode: both;
         animation-fill-mode: both
     }
-    @-webkit-keyframes fadeInUp {
-        0% {
-            opacity: 0;
-            -webkit-transform: translateY(20px);
-            transform: translateY(20px)
-        }
-        100% {
-            opacity: 1;
-            -webkit-transform: translateY(0);
-            transform: translateY(0)
-        }
+    /* Animations */
+    @-webkit-keyframes bg-animation {
+        0%{background-position:50% 0%}
+        50%{background-position:51% 100%}
+        100%{background-position:50% 0%}
     }
-    @keyframes fadeInUp {
-        0% {
-            opacity: 0;
-            -webkit-transform: translateY(20px);
-            -ms-transform: translateY(20px);
-            transform: translateY(20px)
-        }
-        100% {
-            opacity: 1;
-            -webkit-transform: translateY(0);
-            -ms-transform: translateY(0);
-            transform: translateY(0)
-        }
+    @-moz-keyframes bg-animation {
+        0%{background-position:50% 0%}
+        50%{background-position:51% 100%}
+        100%{background-position:50% 0%}
     }
-    .fadeInUp {
-        -webkit-animation-name: fadeInUp;
-        animation-name: fadeInUp
+    @-o-keyframes bg-animation {
+        0%{background-position:50% 0%}
+        50%{background-position:51% 100%}
+        100%{background-position:50% 0%}
+    }
+    @keyframes bg-animation {
+        0%{background-position:50% 0%}
+        50%{background-position:51% 100%}
+        100%{background-position:50% 0%}
+    }
+    @-webkit-keyframes fadeIn {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+    @keyframes fadeIn {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
     }
     </style>
 </head>
 
 <body>
-    <h1 class="fadeInUp animated">Weyo</h1>
+    <h1 class="logo--animated">Weyo</h1>
 </body>
 
 </html>
