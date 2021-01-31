@@ -1,4 +1,4 @@
 weyo.co.uk
 ==========
 
-Holding page for Weyo Ltd site
+Landing page for weyo.co.uk
